@@ -1,3 +1,3 @@
-include ':MaterialDialogs'
+include ':Material-Dialogs'
 include ':app'
-rootProject.name = "MaterialDialogs"
+rootProject.name = "Material-Dialogs"
