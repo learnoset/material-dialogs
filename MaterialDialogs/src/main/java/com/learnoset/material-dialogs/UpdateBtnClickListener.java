@@ -1,4 +1,4 @@
-package com.learnoset.materialdialogs;
+package com.learnoset.dialogs;
 
 
 public abstract class UpdateBtnClickListener {

@@ -1,4 +1,4 @@
-package com.learnoset.materialdialogs;
+package com.learnoset.dialogs;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.learnoset.materialdialogs", appContext.getPackageName());
+        assertEquals("com.learnoset.materialdialogs.test", appContext.getPackageName());
     }
 }
