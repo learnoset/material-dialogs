@@ -1,0 +1,3 @@
+include ':MaterialDialogs'
+include ':app'
+rootProject.name = "MaterialDialogs"
