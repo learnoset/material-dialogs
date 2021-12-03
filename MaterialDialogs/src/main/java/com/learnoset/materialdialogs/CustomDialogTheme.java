@@ -1,4 +1,4 @@
-package com.learnoset.dialogs;
+package com.learnoset.materialdialogs;
 
 import android.graphics.Color;
 
@@ -37,7 +37,7 @@ public class CustomDialogTheme {
         this.waveColorOne = waveColorOne;
     }
 
-    public void setWaveColorOne(com.learnoset.dialogs.AppUpdateDialog.DialogColors waveColorOne) {
+    public void setWaveColorOne(AppUpdateDialog.DialogColors waveColorOne) {
         this.waveColorOne = Color.parseColor(getColorValue(waveColorOne));
     }
 
@@ -49,7 +49,7 @@ public class CustomDialogTheme {
         this.waveColorTwo = waveColorTwo;
     }
 
-    public void setWaveColorTwo(com.learnoset.dialogs.AppUpdateDialog.DialogColors waveColorTwo) {
+    public void setWaveColorTwo(AppUpdateDialog.DialogColors waveColorTwo) {
         this.waveColorTwo = Color.parseColor(getColorValue(waveColorTwo));
     }
 
@@ -61,7 +61,7 @@ public class CustomDialogTheme {
         this.versionNameColor = versionNameColor;
     }
 
-    public void setVersionNameColor(com.learnoset.dialogs.AppUpdateDialog.DialogColors versionNameColor) {
+    public void setVersionNameColor(AppUpdateDialog.DialogColors versionNameColor) {
         this.versionNameColor = Color.parseColor(getColorValue(versionNameColor));
     }
 
@@ -73,7 +73,7 @@ public class CustomDialogTheme {
         this.dialogBackgroundColor = dialogBackgroundColor;
     }
 
-    public void setDialogBackgroundColor(com.learnoset.dialogs.AppUpdateDialog.DialogColors dialogBackgroundColor) {
+    public void setDialogBackgroundColor(AppUpdateDialog.DialogColors dialogBackgroundColor) {
         this.dialogBackgroundColor = Color.parseColor(getColorValue(dialogBackgroundColor));
     }
 
@@ -85,7 +85,7 @@ public class CustomDialogTheme {
         this.updateNowBtnColor = updateNowBtnColor;
     }
 
-    public void setUpdateNowBtnColor(com.learnoset.dialogs.AppUpdateDialog.DialogColors updateNowBtnColor) {
+    public void setUpdateNowBtnColor(AppUpdateDialog.DialogColors updateNowBtnColor) {
         this.updateNowBtnColor = Color.parseColor(getColorValue(updateNowBtnColor));
     }
 
@@ -97,39 +97,39 @@ public class CustomDialogTheme {
         this.textColor = textColor;
     }
 
-    public void setTextColor(com.learnoset.dialogs.AppUpdateDialog.DialogColors textColor) {
+    public void setTextColor(AppUpdateDialog.DialogColors textColor) {
         this.textColor = Color.parseColor(getColorValue(textColor));
     }
 
-    private String getColorValue(com.learnoset.dialogs.AppUpdateDialog.DialogColors navColor) {
+    private String getColorValue(AppUpdateDialog.DialogColors navColor) {
 
         String selectedColorValue = "";
 
-        if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.RED) {
+        if (navColor == AppUpdateDialog.DialogColors.RED) {
             selectedColorValue = "#FFFF1744";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.BLACK) {
+        } else if (navColor == AppUpdateDialog.DialogColors.BLACK) {
             selectedColorValue = "#000000";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.GRAY) {
+        } else if (navColor == AppUpdateDialog.DialogColors.GRAY) {
             selectedColorValue = "#998A8A8A";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.ORANGE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.ORANGE) {
             selectedColorValue = "#FF9100";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.WHITE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.WHITE) {
             selectedColorValue = "#FFFFFF";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.YELLOW) {
+        } else if (navColor == AppUpdateDialog.DialogColors.YELLOW) {
             selectedColorValue = "#FFEA00";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.DARK_RED) {
+        } else if (navColor == AppUpdateDialog.DialogColors.DARK_RED) {
             selectedColorValue = "#FFD50000";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.LIGHT_RED) {
+        } else if (navColor == AppUpdateDialog.DialogColors.LIGHT_RED) {
             selectedColorValue = "#FFFF8A80";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.DARK_ORANGE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.DARK_ORANGE) {
             selectedColorValue = "#FFFF6D00";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.LIGHT_ORANGE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.LIGHT_ORANGE) {
             selectedColorValue = "#FFFFD180";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.BLUE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.BLUE) {
             selectedColorValue = "#FF00B0FF";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.DARK_BLUE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.DARK_BLUE) {
             selectedColorValue = "#FF0091EA";
-        } else if (navColor == com.learnoset.dialogs.AppUpdateDialog.DialogColors.LIGHT_BLUE) {
+        } else if (navColor == AppUpdateDialog.DialogColors.LIGHT_BLUE) {
             selectedColorValue = "#FF80D8FF";
         }
 

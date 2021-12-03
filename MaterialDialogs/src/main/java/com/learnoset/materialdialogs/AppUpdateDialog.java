@@ -1,4 +1,4 @@
-package com.learnoset.dialogs;
+package com.learnoset.materialdialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -26,7 +26,7 @@ public class AppUpdateDialog extends Dialog {
     private final Context context;
     private final String versionNameTxt;
     private final List<String> updateDetailsLists = new ArrayList<>();
-    private com.learnoset.dialogs.UpdateBtnClickListener updateBtnClickListener;
+    private UpdateBtnClickListener updateBtnClickListener;
     private int waveColorOne;
     private int waveColorTwo;
     private int versionNameColor;
@@ -42,7 +42,7 @@ public class AppUpdateDialog extends Dialog {
 
     private boolean rocketShowing = true;
 
-    private com.learnoset.dialogs.UpdateDetailsAdapter updateDetailsAdapter;
+    private UpdateDetailsAdapter updateDetailsAdapter;
 
     public AppUpdateDialog(@NonNull Context context, String versionName) {
         super(context);
@@ -77,7 +77,7 @@ public class AppUpdateDialog extends Dialog {
         refreshDialog();
     }
 
-    public void setDialogTheme(com.learnoset.dialogs.CustomDialogTheme customDialogTheme) {
+    public void setDialogTheme(CustomDialogTheme customDialogTheme) {
 
         if (customDialogTheme.getWaveColorOne() != 0) {
             waveColorOne = Color.parseColor("#AA00FF");
@@ -101,7 +101,7 @@ public class AppUpdateDialog extends Dialog {
         refreshDialog();
     }
 
-    public void setUpdateBtnClickListener(com.learnoset.dialogs.UpdateBtnClickListener updateBtnClickListener) {
+    public void setUpdateBtnClickListener(UpdateBtnClickListener updateBtnClickListener) {
         this.updateBtnClickListener = updateBtnClickListener;
     }
 
@@ -138,7 +138,7 @@ public class AppUpdateDialog extends Dialog {
 
         versionName.setText(versionNameTxt);
 
-        updateDetailsAdapter = new com.learnoset.dialogs.UpdateDetailsAdapter(updateDetailsLists);
+        updateDetailsAdapter = new UpdateDetailsAdapter(updateDetailsLists);
         updateDetailsAdapter.setTextColor(textColor);
 
         updateDetails.setAdapter(updateDetailsAdapter);

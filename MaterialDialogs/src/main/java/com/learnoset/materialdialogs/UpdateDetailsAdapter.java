@@ -1,4 +1,4 @@
-package com.learnoset.dialogs;
+package com.learnoset.materialdialogs;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
