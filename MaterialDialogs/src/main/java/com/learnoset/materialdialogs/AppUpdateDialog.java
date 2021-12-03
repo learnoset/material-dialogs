@@ -48,8 +48,6 @@ public class AppUpdateDialog extends Dialog {
         super(context);
         this.context = context;
         this.versionNameTxt = versionName;
-        setDialogTheme(DialogTheme.LIGHT);
-        refreshDialog();
     }
 
     public void showRocketIcon(boolean showRocketIcon) {
@@ -149,6 +147,9 @@ public class AppUpdateDialog extends Dialog {
                 updateBtnClickListener.onClick();
             }
         });
+
+        setDialogTheme(DialogTheme.LIGHT);
+        refreshDialog();
 
     }
 
