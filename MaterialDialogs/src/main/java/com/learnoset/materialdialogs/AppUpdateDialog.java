@@ -131,18 +131,30 @@ public class AppUpdateDialog extends Dialog {
 
     public void addUpdateFeature(String newUpdateFeature) {
         updateDetailsLists.add(newUpdateFeature);
+        if (dialogShowing) {
+            refreshDialog();
+        }
     }
 
     public void addUpdateFeatures(String[] newUpdateFeature) {
         updateDetailsLists.addAll(Arrays.asList(newUpdateFeature));
+        if (dialogShowing) {
+            refreshDialog();
+        }
     }
 
     public void addUpdateFeatures(List<String> updateDetailsLists) {
         this.updateDetailsLists.addAll(updateDetailsLists);
+        if (dialogShowing) {
+            refreshDialog();
+        }
     }
 
     public void removeFeature(int position) {
         updateDetailsLists.remove(position);
+        if (dialogShowing) {
+            refreshDialog();
+        }
     }
 
     @Override
