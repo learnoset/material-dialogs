@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -73,8 +74,8 @@ public class AppUpdateDialog extends Dialog {
 
     public void setDialogTheme(DialogTheme dialogTheme) {
         if (dialogTheme == DialogTheme.DARK) {
-            waveColorOne = Color.parseColor("#AA00FF");
-            waveColorTwo = Color.parseColor("#6D00A3");
+            waveColorOne = Color.parseColor("#7C00BA");
+            waveColorTwo = Color.parseColor("#5B0088");
             versionNameColor = Color.parseColor("#F65555");
             dialogBackgroundColor = Color.parseColor("#0C243C");
             updateNowBtnColor = Color.parseColor("#F65555");
@@ -164,6 +165,7 @@ public class AppUpdateDialog extends Dialog {
         setContentView(R.layout.update_dialog_layout);
 
         final RecyclerView updateDetails = findViewById(R.id.updateDetailsRecyclerView);
+
         updateNowBtn = findViewById(R.id.updateNowBtn);
         versionName = findViewById(R.id.updateVersionName);
         rocketIcon = findViewById(R.id.rocketIcon);
@@ -177,6 +179,9 @@ public class AppUpdateDialog extends Dialog {
 
         updateDetailsAdapter = new UpdateDetailsAdapter(updateDetailsLists);
         updateDetailsAdapter.setTextColor(textColor);
+
+        updateDetails.setHasFixedSize(true);
+        updateDetails.setLayoutManager(new LinearLayoutManager(context));
 
         updateDetails.setAdapter(updateDetailsAdapter);
 

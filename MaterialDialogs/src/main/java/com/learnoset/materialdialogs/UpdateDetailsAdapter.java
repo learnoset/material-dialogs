@@ -1,6 +1,7 @@
 package com.learnoset.materialdialogs;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +28,12 @@ public class UpdateDetailsAdapter extends RecyclerView.Adapter<UpdateDetailsAdap
     @SuppressLint("InflateParams")
     @NonNull
     @Override
-    public UpdateDetailsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.update_details_adapter_layout, null));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UpdateDetailsAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.updateDetailsTxt.setText((position + 1)+". "+updateDetailsList.get(position));
         holder.updateDetailsTxt.setTextColor(textColor);
