@@ -34,7 +34,7 @@ public class UpdateDetailsAdapter extends RecyclerView.Adapter<UpdateDetailsAdap
     @Override
     public void onBindViewHolder(@NonNull UpdateDetailsAdapter.MyViewHolder holder, int position) {
 
-        holder.updateDetailsTxt.setText(updateDetailsList.get(position));
+        holder.updateDetailsTxt.setText((position + 1)+". "+updateDetailsList.get(position));
         holder.updateDetailsTxt.setTextColor(textColor);
     }
 

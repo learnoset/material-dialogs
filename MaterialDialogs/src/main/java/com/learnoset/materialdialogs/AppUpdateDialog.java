@@ -158,6 +158,7 @@ public class AppUpdateDialog extends Dialog {
         waveImageOne = findViewById(R.id.waveImageOne);
         waveImageTwo = findViewById(R.id.waveImageTwo);
 
+        updateAvailableTxt = findViewById(R.id.updateAvailableTxt);
         dialogBackground = findViewById(R.id.dialogBackground);
 
         versionName.setText(versionNameTxt);
@@ -187,7 +188,7 @@ public class AppUpdateDialog extends Dialog {
         dialogBackground.setBackgroundColor(dialogBackgroundColor);
         updateDetailsAdapter.reloadRecyclerView(textColor, updateDetailsLists);
         updateAvailableTxt.setTextColor(updateAvailableTxtColor);
-        
+
         if (rocketShowing) {
             rocketIcon.setVisibility(View.VISIBLE);
         } else {
