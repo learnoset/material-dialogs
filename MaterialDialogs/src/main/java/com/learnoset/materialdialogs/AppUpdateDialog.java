@@ -43,6 +43,7 @@ public class AppUpdateDialog extends Dialog {
     private boolean rocketShowing = true;
 
     private UpdateDetailsAdapter updateDetailsAdapter;
+    private boolean dialogShowing = false;
 
     public AppUpdateDialog(@NonNull Context context, String versionName) {
         super(context);
@@ -60,7 +61,10 @@ public class AppUpdateDialog extends Dialog {
 
     public void showRocketIcon(boolean showRocketIcon) {
         rocketShowing = showRocketIcon;
-        refreshDialog();
+
+        if(dialogShowing){
+            refreshDialog();
+        }
     }
 
     public void setDialogTheme(DialogTheme dialogTheme) {
@@ -80,7 +84,9 @@ public class AppUpdateDialog extends Dialog {
             textColor = Color.parseColor("#99000000");
         }
 
-        refreshDialog();
+        if(dialogShowing){
+            refreshDialog();
+        }
     }
 
     public void setDialogTheme(CustomDialogTheme customDialogTheme) {
@@ -104,7 +110,9 @@ public class AppUpdateDialog extends Dialog {
             textColor = Color.parseColor("#99000000");
         }
 
-        refreshDialog();
+        if(dialogShowing){
+            refreshDialog();
+        }
     }
 
     public void setUpdateBtnClickListener(UpdateBtnClickListener updateBtnClickListener) {
@@ -156,6 +164,7 @@ public class AppUpdateDialog extends Dialog {
             }
         });
 
+        dialogShowing = true;
         refreshDialog();
 
     }
