@@ -53,6 +53,7 @@ public class AppUpdateDialog extends Dialog {
         super(context);
         this.context = context;
         this.versionNameTxt = versionName;
+        this.updateBtnClickListener = null;
 
         waveColorOne = Color.parseColor("#FFD748");
         waveColorTwo = Color.parseColor("#F1CB44");
@@ -188,7 +189,10 @@ public class AppUpdateDialog extends Dialog {
         updateNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateBtnClickListener.onClick();
+
+                if(updateBtnClickListener != null){
+                    updateBtnClickListener.onClick();
+                }
             }
         });
 
