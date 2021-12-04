@@ -13,7 +13,7 @@ import java.util.List;
 
 public class UpdateDetailsAdapter extends RecyclerView.Adapter<UpdateDetailsAdapter.MyViewHolder> {
 
-    private final List<String> updateDetailsList;
+    private List<String> updateDetailsList;
     private int textColor;
 
     public UpdateDetailsAdapter(List<String> updateDetailsList) {
@@ -43,8 +43,10 @@ public class UpdateDetailsAdapter extends RecyclerView.Adapter<UpdateDetailsAdap
         return updateDetailsList.size();
     }
 
-    public void reloadRecyclerView(int textColor){
+    public void reloadRecyclerView(int textColor, List<String> updateDetailsList){
         this.textColor = textColor;
+        this.updateDetailsList = updateDetailsList;
+        notifyDataSetChanged();
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {

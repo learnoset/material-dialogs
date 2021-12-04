@@ -10,6 +10,7 @@ public class CustomDialogTheme {
     private int dialogBackgroundColor;
     private int updateNowBtnColor;
     private int textColor;
+    private int updateAvailableTxtColor;
 
     public CustomDialogTheme() {
         waveColorOne = 0;
@@ -18,15 +19,17 @@ public class CustomDialogTheme {
         dialogBackgroundColor = 0;
         updateNowBtnColor = 0;
         textColor = 0;
+        updateAvailableTxtColor = 0;
     }
 
-    public CustomDialogTheme(int waveColorOne, int waveColorTwo, int versionNameColor, int dialogBackgroundColor, int updateNowBtnColor, int textColor) {
+    public CustomDialogTheme(int waveColorOne, int waveColorTwo, int versionNameColor, int dialogBackgroundColor, int updateNowBtnColor, int textColor, int updateAvailableTxtColor) {
         this.waveColorOne = waveColorOne;
         this.waveColorTwo = waveColorTwo;
         this.versionNameColor = versionNameColor;
         this.dialogBackgroundColor = dialogBackgroundColor;
         this.updateNowBtnColor = updateNowBtnColor;
         this.textColor = textColor;
+        this.updateAvailableTxtColor = updateAvailableTxtColor;
     }
 
     public int getWaveColorOne() {
@@ -99,6 +102,18 @@ public class CustomDialogTheme {
 
     public void setTextColor(AppUpdateDialog.DialogColors textColor) {
         this.textColor = Color.parseColor(getColorValue(textColor));
+    }
+
+    public int getUpdateAvailableTxtColor() {
+        return updateAvailableTxtColor;
+    }
+
+    public void setUpdateAvailableTxtColor(int updateAvailableTxtColor) {
+        this.updateAvailableTxtColor = updateAvailableTxtColor;
+    }
+
+    public void setUpdateAvailableTxtColor(AppUpdateDialog.DialogColors updateAvailableTxtColor) {
+        this.updateAvailableTxtColor = Color.parseColor(getColorValue(updateAvailableTxtColor));
     }
 
     private String getColorValue(AppUpdateDialog.DialogColors navColor) {

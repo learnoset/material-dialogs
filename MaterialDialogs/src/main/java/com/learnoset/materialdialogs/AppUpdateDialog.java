@@ -27,18 +27,21 @@ public class AppUpdateDialog extends Dialog {
     private final String versionNameTxt;
     private final List<String> updateDetailsLists = new ArrayList<>();
     private UpdateBtnClickListener updateBtnClickListener;
+
     private int waveColorOne;
     private int waveColorTwo;
     private int versionNameColor;
     private int dialogBackgroundColor;
     private int updateNowBtnColor;
     private int textColor;
+    private int updateAvailableTxtColor;
 
     private ImageView waveImageOne, waveImageTwo;
     private ImageView rocketIcon;
     private AppCompatButton updateNowBtn;
     private TextView versionName;
     private LinearLayout dialogBackground;
+    private TextView updateAvailableTxt;
 
     private boolean rocketShowing = true;
 
@@ -56,13 +59,14 @@ public class AppUpdateDialog extends Dialog {
         dialogBackgroundColor = Color.parseColor("#FFFFFF");
         updateNowBtnColor = Color.parseColor("#F65555");
         textColor = Color.parseColor("#99000000");
+        updateAvailableTxtColor = Color.parseColor("#CC000000");
 
     }
 
     public void showRocketIcon(boolean showRocketIcon) {
         rocketShowing = showRocketIcon;
 
-        if(dialogShowing){
+        if (dialogShowing) {
             refreshDialog();
         }
     }
@@ -75,6 +79,7 @@ public class AppUpdateDialog extends Dialog {
             dialogBackgroundColor = Color.parseColor("#0C243C");
             updateNowBtnColor = Color.parseColor("#F65555");
             textColor = Color.parseColor("#99FFFFFF");
+            updateAvailableTxtColor = Color.parseColor("#CCFFFFFF");
         } else {
             waveColorOne = Color.parseColor("#FFD748");
             waveColorTwo = Color.parseColor("#F1CB44");
@@ -82,9 +87,10 @@ public class AppUpdateDialog extends Dialog {
             dialogBackgroundColor = Color.parseColor("#FFFFFF");
             updateNowBtnColor = Color.parseColor("#F65555");
             textColor = Color.parseColor("#99000000");
+            updateAvailableTxtColor = Color.parseColor("#CC000000");
         }
 
-        if(dialogShowing){
+        if (dialogShowing) {
             refreshDialog();
         }
     }
@@ -110,7 +116,11 @@ public class AppUpdateDialog extends Dialog {
             textColor = Color.parseColor("#99000000");
         }
 
-        if(dialogShowing){
+        if(customDialogTheme.getUpdateAvailableTxtColor() != 0){
+            updateAvailableTxtColor = customDialogTheme.getUpdateAvailableTxtColor();
+        }
+
+        if (dialogShowing) {
             refreshDialog();
         }
     }
@@ -166,7 +176,6 @@ public class AppUpdateDialog extends Dialog {
 
         dialogShowing = true;
         refreshDialog();
-
     }
 
     private void refreshDialog() {
@@ -176,8 +185,9 @@ public class AppUpdateDialog extends Dialog {
         versionName.setTextColor(versionNameColor);
         updateNowBtn.setBackgroundDrawable(generateRoundBack(updateNowBtnColor));
         dialogBackground.setBackgroundColor(dialogBackgroundColor);
-        updateDetailsAdapter.reloadRecyclerView(textColor);
-
+        updateDetailsAdapter.reloadRecyclerView(textColor, updateDetailsLists);
+        updateAvailableTxt.setTextColor(updateAvailableTxtColor);
+        
         if (rocketShowing) {
             rocketIcon.setVisibility(View.VISIBLE);
         } else {
