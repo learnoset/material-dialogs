@@ -48,6 +48,14 @@ public class AppUpdateDialog extends Dialog {
         super(context);
         this.context = context;
         this.versionNameTxt = versionName;
+
+        waveColorOne = Color.parseColor("#FFD748");
+        waveColorTwo = Color.parseColor("#F1CB44");
+        versionNameColor = Color.parseColor("#F65555");
+        dialogBackgroundColor = Color.parseColor("#FFFFFF");
+        updateNowBtnColor = Color.parseColor("#F65555");
+        textColor = Color.parseColor("#99000000");
+
     }
 
     public void showRocketIcon(boolean showRocketIcon) {
@@ -57,15 +65,15 @@ public class AppUpdateDialog extends Dialog {
 
     public void setDialogTheme(DialogTheme dialogTheme) {
         if (dialogTheme == DialogTheme.DARK) {
-            waveColorOne = Color.parseColor("#FFD748");
-            waveColorTwo = Color.parseColor("#F1CB44");
+            waveColorOne = Color.parseColor("#AA00FF");
+            waveColorTwo = Color.parseColor("#6D00A3");
             versionNameColor = Color.parseColor("#F65555");
             dialogBackgroundColor = Color.parseColor("#0C243C");
             updateNowBtnColor = Color.parseColor("#F65555");
             textColor = Color.parseColor("#99FFFFFF");
         } else {
-            waveColorOne = Color.parseColor("#AA00FF");
-            waveColorTwo = Color.parseColor("#6D00A3");
+            waveColorOne = Color.parseColor("#FFD748");
+            waveColorTwo = Color.parseColor("#F1CB44");
             versionNameColor = Color.parseColor("#F65555");
             dialogBackgroundColor = Color.parseColor("#FFFFFF");
             updateNowBtnColor = Color.parseColor("#F65555");
@@ -148,7 +156,6 @@ public class AppUpdateDialog extends Dialog {
             }
         });
 
-        setDialogTheme(DialogTheme.LIGHT);
         refreshDialog();
 
     }
